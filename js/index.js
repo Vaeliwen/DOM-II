@@ -5,6 +5,7 @@ let navArray = Array.from(navBar.children)
 navArray.forEach(nava => nava.addEventListener('click', function() {
     nava.style.color = 'green';
     event.stopPropagation();
+    event.preventDefault();
 }))
 
 navBar.addEventListener('click', function() {
