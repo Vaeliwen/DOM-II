@@ -18,12 +18,12 @@ navArray.forEach(nava => nava.addEventListener('mousedown', function() {
 
 const introArea = document.querySelector('.intro')
 
-introArea.children[2].addEventListener('mouseover', function() {
+introArea.children[2].addEventListener('dblclick', function() {
     introArea.children[2].textContent = 'Lol';
     introArea.children[1].textContent = 'git rekt';
 })
 
-introArea.children[1].addEventListener('click', function() {
+introArea.children[1].addEventListener('wheel', function() {
     introArea.children[2].textContent = `You aren't that clever.`
     introArea.children[1].textContent = 'You know,'
 })
@@ -45,17 +45,17 @@ btn.forEach(bitn => bitn.addEventListener('mouseleave', function() {
 
 const pictures = document.querySelectorAll('.img-content')
 const txtCntnt = document.querySelectorAll('.text-content')
-pictures.forEach(pic => pic.addEventListener('mouseover', function() {
+pictures.forEach(pic => pic.addEventListener('mouseup', function() {
     txtCntnt[0].remove()
     txtCntnt[1].remove()
 }))
 
-txtCntnt.forEach(txt => txt.addEventListener('mouseover', function() {
+txtCntnt.forEach(txt => txt.addEventListener('mousedown', function() {
     pictures[0].remove()
     pictures[1].remove()
 }))
 
-txtCntnt.forEach(txt => txt.addEventListener('click', function() {
+txtCntnt.forEach(txt => txt.addEventListener('contextmenu', function() {
     txtCntnt[0].children[0].textContent = 'WHY'
     txtCntnt[0].children[1].textContent = 'WOULD'
     txtCntnt[0].children[2].textContent = 'YOU'
