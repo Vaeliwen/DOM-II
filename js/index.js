@@ -1,9 +1,15 @@
 // Your code goes here
+
 const navBar = document.querySelector('nav')
 let navArray = Array.from(navBar.children)
 navArray.forEach(nava => nava.addEventListener('click', function() {
     nava.style.color = 'green';
+    event.stopPropagation();
 }))
+
+navBar.addEventListener('click', function() {
+    navBar.style.background = 'pink';
+})
 
 navArray.forEach(nava => nava.addEventListener('mousedown', function() {
     nava.style.color = 'red';
@@ -55,6 +61,6 @@ txtCntnt.forEach(txt => txt.addEventListener('click', function() {
     txtCntnt[1].children[0].textContent = 'DO'
     txtCntnt[1].children[1].textContent = 'THIS'
     txtCntnt[1].children[2].textContent = 'YOU FOOL!!!!!!!!!!!'
-    txtCntnt[0].style.background = 'green';
-    txtCntnt[1].style.background = 'blue';
+    txtCntnt[0].children[1].style.background = 'green';
+    txtCntnt[1].children[2].style.background = 'blue';
 }))
